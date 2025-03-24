@@ -1,0 +1,27 @@
+/* Para telas grandes (Desktop) */
+@media (min-width: 1200px) {
+    .carousel-inner {
+        width: 600px !important; /* Ajuste para desktops grandes */
+    }
+}
+
+/* Para telas médias (Tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .carousel-inner {
+        width: 500px !important; /* Ajuste para tablets */
+    }
+}
+
+/* Para telas pequenas (Celulares grandes) */
+@media (max-width: 767px) and (min-width: 480px) {
+    .carousel-inner {
+        width: 400px !important; /* Ajuste para celulares grandes */
+    }
+}
+
+/* Para telas muito pequenas (Celulares pequenos) */
+@media (max-width: 479px) {
+    .carousel-inner {
+        width: 100% !important; /* Ocupa toda a largura da tela */
+    }
+}
