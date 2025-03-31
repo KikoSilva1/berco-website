@@ -74,8 +74,13 @@
                 initialView: 'dayGridMonth',
                 selectable: true,
                 select: function(info) {
-                    document.getElementById('dataSelecionada').value = info.startStr;
-                    new bootstrap.Modal(document.getElementById('agendamentoModal')).show();
+                    let modalCalendario = bootstrap.Modal.getInstance(document.getElementById('calendarioModal'));
+                    modalCalendario.hide(); // Fecha o modal do calendário antes de abrir o de agendamento
+
+                    setTimeout(() => { 
+                        document.getElementById('dataSelecionada').value = info.startStr;
+                        new bootstrap.Modal(document.getElementById('agendamentoModal')).show();
+                    }, 300); // Pequeno atraso para evitar bugs no mobile
                 },
                 events: '/eventos'
             });
